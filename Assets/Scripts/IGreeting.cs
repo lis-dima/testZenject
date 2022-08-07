@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-interface IGreeting
+public interface IGreeting
 {
     string GetGreeting();
 }

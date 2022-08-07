@@ -3,14 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using Zenject;
 
-public class GreetingConsumer : MonoBehaviour
+namespace FirstLook
 {
-    [Inject]
-    IGreeting greeting;
-
-    // Update is called once per frame
-    void Update()
+    public class GreetingConsumer : MonoBehaviour
     {
-        Debug.Log(greeting.GetGreeting());
+        [Inject]
+        IGreeting greeting;
+
+        // Update is called once per frame
+        void Start()
+        {
+            Debug.Log("Start");
+            Debug.Log(greeting.GetGreeting());
+        }
     }
 }

@@ -1,10 +1,13 @@
 using UnityEngine;
 using Zenject;
 
-public class GreetingMonoInstaller : MonoInstaller
+namespace FirstLook
 {
-    public override void InstallBindings()
+    public class GreetingMonoInstaller : MonoInstaller
     {
-        Container.Bind<IGreeting>().To<Greeting>().AsSingle();
+        public override void InstallBindings()
+        {
+            Container.Bind<IGreeting>().To<Greeting>().AsSingle();
+        }
     }
 }
